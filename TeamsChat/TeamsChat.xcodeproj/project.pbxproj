@@ -18,6 +18,15 @@
 		EA2F274D2940935500D3B89C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F27452940935400D3B89C /* Data.swift */; };
 		EA2F274E2940935500D3B89C /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F27472940935500D3B89C /* ApiClient.swift */; };
 		EA2F27502940935500D3B89C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F274A2940935500D3B89C /* CustomTableViewCell.swift */; };
+		EA2F275429409BAE00D3B89C /* ChatUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F275329409BAE00D3B89C /* ChatUIConfiguration.swift */; };
+		EA2F276C29409DA400D3B89C /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F276529409DA400D3B89C /* UIScrollView.swift */; };
+		EA2F276D29409DA400D3B89C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F276629409DA400D3B89C /* Date.swift */; };
+		EA2F276E29409DA400D3B89C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F276729409DA400D3B89C /* UIView.swift */; };
+		EA2F276F29409DA400D3B89C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F276829409DA400D3B89C /* UIColor.swift */; };
+		EA2F277029409DA400D3B89C /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F276929409DA400D3B89C /* UITextField.swift */; };
+		EA2F277129409DA400D3B89C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F276A29409DA400D3B89C /* String.swift */; };
+		EA2F277229409DA400D3B89C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F276B29409DA400D3B89C /* UIImage.swift */; };
+		EA2F277B2940A10500D3B89C /* TeamsChatUIGenericConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F277A2940A10500D3B89C /* TeamsChatUIGenericConfigurationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +43,15 @@
 		EA2F27452940935400D3B89C /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		EA2F27472940935500D3B89C /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		EA2F274A2940935500D3B89C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		EA2F275329409BAE00D3B89C /* ChatUIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatUIConfiguration.swift; sourceTree = "<group>"; };
+		EA2F276529409DA400D3B89C /* UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
+		EA2F276629409DA400D3B89C /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		EA2F276729409DA400D3B89C /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		EA2F276829409DA400D3B89C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EA2F276929409DA400D3B89C /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		EA2F276A29409DA400D3B89C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		EA2F276B29409DA400D3B89C /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		EA2F277A2940A10500D3B89C /* TeamsChatUIGenericConfigurationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsChatUIGenericConfigurationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +84,8 @@
 		EA2F272B2940862100D3B89C /* TeamsChat */ = {
 			isa = PBXGroup;
 			children = (
+				EA2F275529409C5000D3B89C /* Helpers */,
+				EA2F275229409ACE00D3B89C /* SupportingFile */,
 				EA2F27422940935400D3B89C /* Extensions */,
 				EA2F27442940935400D3B89C /* Model */,
 				EA2F27462940935500D3B89C /* Network */,
@@ -92,6 +112,7 @@
 		EA2F27422940935400D3B89C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EA2F276429409DA400D3B89C /* UIExtensions */,
 				EA2F27432940935400D3B89C /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
@@ -120,6 +141,36 @@
 				EA2F274A2940935500D3B89C /* CustomTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EA2F275229409ACE00D3B89C /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				EA2F275329409BAE00D3B89C /* ChatUIConfiguration.swift */,
+			);
+			path = SupportingFile;
+			sourceTree = "<group>";
+		};
+		EA2F275529409C5000D3B89C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA2F277A2940A10500D3B89C /* TeamsChatUIGenericConfigurationProtocol.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA2F276429409DA400D3B89C /* UIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA2F276529409DA400D3B89C /* UIScrollView.swift */,
+				EA2F276629409DA400D3B89C /* Date.swift */,
+				EA2F276729409DA400D3B89C /* UIView.swift */,
+				EA2F276829409DA400D3B89C /* UIColor.swift */,
+				EA2F276929409DA400D3B89C /* UITextField.swift */,
+				EA2F276A29409DA400D3B89C /* String.swift */,
+				EA2F276B29409DA400D3B89C /* UIImage.swift */,
+			);
+			path = UIExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,13 +245,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA2F27502940935500D3B89C /* CustomTableViewCell.swift in Sources */,
+				EA2F277029409DA400D3B89C /* UITextField.swift in Sources */,
 				EA2F274E2940935500D3B89C /* ApiClient.swift in Sources */,
 				EA2F274B2940935500D3B89C /* DataViewModel.swift in Sources */,
 				EA2F274D2940935500D3B89C /* Data.swift in Sources */,
 				EA2F27312940862100D3B89C /* ViewController.swift in Sources */,
+				EA2F277B2940A10500D3B89C /* TeamsChatUIGenericConfigurationProtocol.swift in Sources */,
+				EA2F276D29409DA400D3B89C /* Date.swift in Sources */,
+				EA2F275429409BAE00D3B89C /* ChatUIConfiguration.swift in Sources */,
+				EA2F276F29409DA400D3B89C /* UIColor.swift in Sources */,
+				EA2F277129409DA400D3B89C /* String.swift in Sources */,
 				EA2F274C2940935500D3B89C /* UIViewController+Extensions.swift in Sources */,
+				EA2F276E29409DA400D3B89C /* UIView.swift in Sources */,
 				EA2F272D2940862100D3B89C /* AppDelegate.swift in Sources */,
 				EA2F272F2940862100D3B89C /* SceneDelegate.swift in Sources */,
+				EA2F277229409DA400D3B89C /* UIImage.swift in Sources */,
+				EA2F276C29409DA400D3B89C /* UIScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

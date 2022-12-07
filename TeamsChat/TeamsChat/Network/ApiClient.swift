@@ -1,9 +1,8 @@
 //
-//  ApiClient.swift
-//  MVVMSample
+//  ApitClient.swift
+//  TeamsChat
 //
-//  Created by Antonio Corrales on 26/6/18.
-//  Copyright © 2018 DesarrolloManzana. All rights reserved.
+//  Created by Ronak Sankhala on 07/12/22.
 //
 
 import Foundation
