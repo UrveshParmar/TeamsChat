@@ -49,13 +49,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="REGISTER"/>
                                 <connections>
-                                    <segue destination="gg2-Xu-wV8" kind="show" id="Wgh-Zp-opB"/>
+                                    <segue destination="gg2-Xu-wV8" kind="show" id="cCs-bH-OqC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvX-vd-H6O">
                                 <rect key="frame" x="16" y="374" width="353" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="LOGIN"/>
+                                <connections>
+                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vgq-KR-GaA"/>
+                                    <segue destination="7sl-WJ-2fC" kind="show" id="gBE-0F-CMr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -81,19 +85,17 @@
                     <navigationItem key="navigationItem" id="EJ4-bB-77h"/>
                     <connections>
                         <outlet property="Login" destination="dPX-gY-ApO" id="f7D-hy-XbE"/>
-                        <outlet property="LoginBTN" destination="HvX-vd-H6O" id="RK0-9F-X1Z"/>
                         <outlet property="Pass" destination="BRr-Ix-lwb" id="xHT-SG-rDY"/>
-                        <outlet property="registerbTN" destination="pXz-Xh-6Z2" id="rUh-fc-GmW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="945.80152671755718" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="B60-LW-AKc">
             <objects>
-                <viewController id="gg2-Xu-wV8" sceneMemberID="viewController">
+                <viewController id="gg2-Xu-wV8" customClass="RegisterViewController" customModule="TeamsChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dsb-to-R8Y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,6 +135,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register"/>
                                 <connections>
+                                    <action selector="submitBtn:" destination="gg2-Xu-wV8" eventType="touchUpInside" id="XRN-f5-jsu"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="OM6-UN-fy1"/>
                                 </connections>
                             </button>
@@ -167,6 +170,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ufu-y9-fOo"/>
+                    <connections>
+                        <outlet property="conPasswordTxt" destination="RnU-3d-IcU" id="8sZ-nv-Yrk"/>
+                        <outlet property="emailTxt" destination="XuU-Ge-UCG" id="3ot-fj-YOm"/>
+                        <outlet property="passwordTxt" destination="1SM-Jc-Kz1" id="MkW-fo-X1N"/>
+                        <outlet property="usernameTxt" destination="avx-EU-5ee" id="NdA-EN-zrW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewa-Or-5z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,14 +199,29 @@
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="-27.464788732394368"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="OhE-Sl-SBm">
+            <objects>
+                <viewController id="7sl-WJ-2fC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wkk-N5-t7k">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="feH-L0-SqO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qoo-xC-YUL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axn-SX-QFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="777"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wgh-Zp-opB"/>
         <segue reference="OM6-UN-fy1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

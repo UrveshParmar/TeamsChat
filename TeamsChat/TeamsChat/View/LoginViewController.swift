@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+import SwiftUI
 
 class LoginViewController: UIViewController {
     
@@ -15,41 +18,46 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var Pass: UITextField!
     
     
-    @IBOutlet weak var LoginBTN: UIButton!
-    
-    @IBOutlet weak var registerbTN: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Login.becomeFirstResponder()
+    }
+        
+    
+        
+    @IBAction func loginBtn(_ sender: Any) {
+        
         
         let uname = Login.text ?? ""
         let password = Pass.text ?? ""
+        Auth.auth().signIn(withEmail: uname, password: password) {
+            result, err in
+            if err == nil {
+                print("Login Successful")
+                
+            }
+            
+            else {
+                //failed
+                self.showAlert("Login Failed..")
+                print("failed")
+            }
+        }
+    }
         
         
-        /* Auth.auth().signIn(withEmail: uname, password: password) { result, err in
-         
-         if err == nil{
-         
-         let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
-         self.show(vc, sender: nil)
-         }
-         else{
-         self.showAlert(title: "Login failed..", msg: err!.localizedDescription)            }
-         }
-         
-         }
-         
-         @IBAction func cancelClick(_ sender: Any) {
-         //navigationController?.popViewController(animated: false)
-         Login.text = ""
-         Pass.text = ""
-         
-         
-         }
-         
-         }
+    @IBAction func registerBtn(_ sender: Any) {
+        let control = storyboard?.instantiateViewController(identifier: "RegisterViewController")  as! RegisterViewController
+        control.modalPresentationStyle = .fullScreen
+        control.modalTransitionStyle = .flipHorizontal
+        present(control, animated: true, completion: nil)
+        
+    }
+}
+    
+    
          extension LoginViewController: UITextFieldDelegate {
          
          
@@ -65,8 +73,8 @@ class LoginViewController: UIViewController {
          return true
          }
          
-         */
+        
         
     }
     
-}
+
